@@ -3,57 +3,12 @@
  *Date:2013-7-12
  */
 /*some consts used in TC's graphic library*/
-const grOk = 0,
-    grNoInitGraph = -1,
-    grNotDetected = -2,
-    grFileNotFound = -3,
-    grInvalidDriver = -4,
-    grNoLoadMem = -5,
-    grNoScanMem = -6,
-    grNoFloodMem = -7,
-    grFontNotFound = -8,
-    grNoFontMem = -9,
-    grInvalidMode = -10,
-    grError = -11, /* generic error */
-    grIOerror = -12,
-    grInvalidFont = -13,
-    grInvalidFontNum = -14,
-    grInvalidVersion = -18;
 
 const DETECT = 0, CGA = 1, MCGA = 2, EGA = 3, EGA64 = 4, EGAMONO = 5, IBM8514 = 6,
     HERCMONO = 7, ATT400 = 8, VGA = 9, PC3270 = 10,
     CURRENT_DRIVER = -1;
 
-const CGAC0 = 0, /* 320x200 palette 0; 1 page	*/
-    CGAC1 = 1, /* 320x200 palette 1; 1 page	*/
-    CGAC2 = 2, /* 320x200 palette 2: 1 page	*/
-    CGAC3 = 3, /* 320x200 palette 3; 1 page	*/
-    CGAHI = 4, /* 640x200 1 page			*/
-    MCGAC0 = 0, /* 320x200 palette 0; 1 page	*/
-    MCGAC1 = 1, /* 320x200 palette 1; 1 page	*/
-    MCGAC2 = 2, /* 320x200 palette 2; 1 page	*/
-    MCGAC3 = 3, /* 320x200 palette 3; 1 page	*/
-    MCGAMED = 4, /* 640x200 1 page			*/
-    MCGAHI = 5, /* 640x480 1 page			*/
-    EGALO = 0, /* 640x200 16 color 4 pages	*/
-    EGAHI = 1, /* 640x350 16 color 2 pages	*/
-    EGA64LO = 0, /* 640x200 16 color 1 page 	*/
-    EGA64HI = 1, /* 640x350 4 color  1 page 	*/
-    EGAMONOHI = 0, /* 640x350 64K on card, 1 page - 256K on card, 4 pages */
-    HERCMONOHI = 0, /* 720x348 2 pages 		*/
-    ATT400C0 = 0, /* 320x200 palette 0; 1 page	*/
-    ATT400C1 = 1, /* 320x200 palette 1; 1 page	*/
-    ATT400C2 = 2, /* 320x200 palette 2; 1 page	*/
-    ATT400C3 = 3, /* 320x200 palette 3; 1 page	*/
-    ATT400MED = 4, /* 640x200 1 page			*/
-    ATT400HI = 5, /* 640x400 1 page			*/
-    VGALO = 0, /* 640x200 16 color 4 pages	*/
-    VGAMED = 1, /* 640x350 16 color 2 pages	*/
-    VGAHI = 2, /* 640x480 16 color 1 page 	*/
-    PC3270HI = 0, /* 720x350 1 page			*/
-    IBM8514LO = 0, /* 640x480 256 colors		*/
-    IBM8514HI = 1;
-/*1024x768 256 colors		*/
+
 
 const BLACK = 0, /* dark colors */
     BLUE = 1,
@@ -87,23 +42,6 @@ const CGA_LIGHTGREEN = 1, /* Palette C0 Color Names	*/
     CGA_CYAN = 1, /* Palette C3 Color Names	*/
     CGA_MAGENTA = 2,
     CGA_LIGHTGRAY = 3;
-
-const EGA_BLACK = 0, /* dark colors */
-    EGA_BLUE = 1,
-    EGA_GREEN = 2,
-    EGA_CYAN = 3,
-    EGA_RED = 4,
-    EGA_MAGENTA = 5,
-    EGA_BROWN = 20,
-    EGA_LIGHTGRAY = 7,
-    EGA_DARKGRAY = 56, /* light colors */
-    EGA_LIGHTBLUE = 57,
-    EGA_LIGHTGREEN = 58,
-    EGA_LIGHTCYAN = 59,
-    EGA_LIGHTRED = 60,
-    EGA_LIGHTMAGENTA = 61,
-    EGA_YELLOW = 62,
-    EGA_WHITE = 63;
 
 const SOLID_LINE = 0,
     DOTTED_LINE = 1,
@@ -166,115 +104,8 @@ var MovetoPoint = new Point(0, 0);
 function bar3d(left, top, right, bottom, depth, topflag) {
     //TODO to investigate it and finish it 7-12
 }
-function clearviewport() {
-}
-function closegraph() {
-    return null;
-}
-function detectgraph() {
-    return null;
-}
 
-function floodfill(x, y, border) {
-}
-function getarccoords() {
-}
-function getaspectratio() {
-}
-function getdefaultpalette() {
-} //the following are all with return structures
-function getdrivername() {
-    return null;
-}
-function getfillpattern(pattern) {
-}
-function getfillsettings() {
-}
-function getgraphmode() {
-}
-function getimage() {
-}
-function getlinesettings() {
-}
-function getmaxcolor() {
-}
-function getmaxmode() {
-}
-function getmodename() {
-}
-function getmoderange() {
 
-}
-function getpixel() {
-}
-function getpalette() {
-}
-function getpalettesize() {
-}
-function gettextsettings() {
-}
-function getviewsettings() {
-}
-function getx() {
-}
-function gety() {
-}
-function graphdefaults() {
-}
-function grapherrormsg() {
-}
-function _graphfreemem() {
-}
-function _graphgetmem() {
-}
-function graphresult() {
-    return 0;
-}
-function imagesize() {
-}
-function installuserdriver() {
-    return 0;
-}
-function installuserfont() {
-    return 0;
-}
-
-function outtext() {
-}
-
-function putimage() {
-}
-
-function restorecrtmode() {
-}
-
-function setactivepage() {
-}
-function setallpalette() {
-}
-function setaspectratio() {
-}
-function setfillpattern() {
-}
-function setgraphbufsize() {
-    return 0;
-}
-function setgraphmode() {
-    return 0;
-}
-function setpalette() {
-}
-function setrgbpalette() {
-}
-function settextjustify() {
-}
-
-function setusercharsize() {
-}
-function setviewport() {
-}
-function setvisualpage() {
-}
 
 var CanvasId = "MyCanvas";
 var Height = "0";
@@ -648,12 +479,19 @@ function textwidth(string) {
     return ctx.measureText(string);
 }
 
+/*Other Operations*/
+
+
 /*test*/
 function main() {
     initgraph(0, 0, 0);
     setcolor(15);
     moveto(10, 10);
     line(10, 10, 20, 200);
+    for(var i=0;i<=50;i++){
+
+    }
+
     line(10, 0, 20, 220);
     setcolor(YELLOW);
     setfillstyle(1, 12);
@@ -661,3 +499,4 @@ function main() {
     outtextxy(100, 200,"DemoHn");
     line(0,200,200,200);
 }
+
